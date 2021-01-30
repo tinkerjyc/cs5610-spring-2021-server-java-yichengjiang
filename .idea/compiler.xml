@@ -9,8 +9,8 @@
         <module name="wbdv-sp21-02-jannunzi-server-java" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="wbdv-sp21-02-jannunzi-server-java" target="8" />
+    <bytecodeTargetLevel target="11">
+      <module name="wbdv-sp21-02-jannunzi-server-java" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

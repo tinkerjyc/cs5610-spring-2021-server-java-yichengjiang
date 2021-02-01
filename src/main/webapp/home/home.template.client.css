@@ -1,18 +1,20 @@
 .wbdv-sticky-top {
     position: fixed;
     width: 100%;
-    background-color: white;
     z-index: 1;
+    background-color: dodgerblue;
 }
 
 .wbdv-padding-5px {
     padding: 5px;
 }
 
-.wbdv-background {
-    background-color: dodgerblue;
-}
-
 .wbdv-home {
-    color: white;
+    box-shadow: grey;
+}
+.wbdv-sticky-2top {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: lightgrey;
 }

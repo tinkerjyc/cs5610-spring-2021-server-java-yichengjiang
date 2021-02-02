@@ -6,244 +6,187 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
           crossorigin="anonymous"/>
-    <link href="home.template.client.css" rel="stylesheet"/>
+    <link rel='stylesheet' type='text/css' href='home.template.client.css'>
     <meta name="viewport" content="width=device-width， initial-scale=1" />
     <!--    auto fit the phone screen-->
     <meta charset="UTF-8">
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="wbdv-sticky-top wbdv-padding-5px">
-        <div class="row">
-            <div class="col-1">
-                <i class="fa fa-bars fa-2x" style="color: white" ></i>
-            </div>
-            <div class="col-3 d-none d-sm-block" style="color: white">
-                <h4>Course Manager</h4>
-            </div>
-            <div class="col-7">
-                <input class="form-control"
-                       placeholder="New Course Title"
-                />
-            </div>
-            <div class="col-1" >
-                <i class="fas fa-plus-circle fa-2x" style="color: white"></i>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark wbdv-sticky-nav-bar">
+    <div class="container-fluid">
+        <div class="col-1">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <div class="col-2">
+            <a class="navbar-brand priority-3">Course Manager</a>
+        </div>
+        <div class="col-8">
+            <input class="form-control" type="search" placeholder="New Course Title"
+                   aria-label="Search" id="new-course-title">
+        </div>
+        <div class="col-1">
+            <i class="fas fa-plus-circle fa-2x" id="plus-circle"></i>
         </div>
     </div>
-    <br/>
-    <br/>
-    <div class="row wbdv-sticky-2top" >
-        <div class="col-5 d-none d-sm-block">
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            Title
+</nav>
+
+<div class="wbdv-whole-area">
+
+    <nav class="navbar navbar-expand-lg navbar-light top-cell">
+        <div class="form-group row top-cell-inside">
+            <div class="col-6 nav-item priority-1">Title</div>
+            <div class="col-2 nav-item priority-2">Owned by
+                <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="col-2.5 nav-item priority-3">Last Modified by me</div>
+            <div class="col-1 nav-item priority-5">
+                <i class="fas fa-grip-horizontal"></i>
+            </div>
+            <div class="col-1 nav-item priority-5">
+                <i class="fas fa-sort-alpha-down priority-3"></i>
+            </div>
         </div>
-        <div class="col-3 d-none d-sm-block">
-            Owned by
-            <i class="fa fa-sort-up"></i>
+    </nav>
+
+
+    <div class="cell-box">
+        <div class="form-group row days-divide-cell">
+            <div class="col-10">Today</div>
         </div>
-        <div class="col-3 d-none d-sm-block">
-            Last modified
-        </div>
-        <div class="col-1 d-none d-sm-block">
-            <i class="fa fa-th"></i>
-            <i class="fa fa-sort"></i>
-        </div>
-    </div>
-    <br/>
-    <div class="container">
-        <h4>Today</h4>
-        <div class="row">
-            <div class="col-5">
+
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
                 <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS4550
+                    <i class="fas fa-file"></i>
+                    CS5500 Software Engineering Graduate
                 </a>
             </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3200
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS5610
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS1234
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS2345
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">6:45PM</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
             </div>
         </div>
 
-        <br/>
-        <h4>Yesterday</h4>
-        <div class="row">
-            <div class="col-5">
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
                 <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
+                    <i class="fas fa-file"></i>
+                    CS4550 Software Engineering Undergraduate
                 </a>
             </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <a href="../course-editor/course-editor.template.client.html">
-                    <i class="fa fa-file"></i>
-                    CS3456
-                </a>
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                me
-            </div>
-            <div class="col-3 d-none d-sm-block">
-                1/1/2021
-            </div>
-            <div class="col-1" style="margin-left: auto">
-                <i class="fa fa-trash"></i>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">6:45PM</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
             </div>
         </div>
 
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file"></i>
+                    CS4500 WebDev Undergraduate
+                </a>
+            </div>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">6:45PM</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file"></i>
+                    CS5610 WebDev Graduate
+                </a>
+            </div>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">6:45PM</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file"></i>
+                    CS5200 Intro to Database
+                </a>
+            </div>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">6:45PM</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="form-group row days-divide-cell">
+            <div class="col-10">Yesterday</div>
+        </div>
+
+        <div class="form-group row cell">
+            <div class="col-6">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file priority-1"></i>
+                    WEBDEV 2 - React
+                    <i class="fas fa-user-friends"></i>
+                </a>
+            </div>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">May 4, 2018</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="form-group row days-divide-cell">
+            <div class="col-10">Previous 7 days</div>
+        </div>
+
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file"></i>
+                    WEBDEV SYLLABUS
+                    <i class="fas fa-user-friends"></i>
+                </a>
+            </div>
+            <div class="col-2 priority-2">me</div>
+            <div class="col-3 priority-3">May 3, 2018</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="form-group row cell">
+            <div class="col-6 priority-1">
+                <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file"></i>
+                    WEBDEV 1 - JavaScript, Java, SQL
+                    <i class="fas fa-info-circle" style="color: #5A5A5A"></i>
+                    <i class="fas fa-user-friends"></i>
+                </a>
+            </div>
+            <div class="col-2 priority-2">Zhe</div>
+            <div class="col-3 priority-3">May 3, 2018</div>
+            <div class="col-1 priority-4">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+
+
+        <!--            fixed add icon-->
+        <div class="sticky-icon float-right">
+            <i class="fas fa-plus-circle fa-3x"></i>
+        </div>
+
     </div>
+</div>
 </body>
 </html>

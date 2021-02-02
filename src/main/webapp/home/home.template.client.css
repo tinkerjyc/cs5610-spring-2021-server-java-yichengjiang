@@ -1,20 +1,153 @@
-.wbdv-sticky-top {
+.wbdv-sticky-nav-bar {
+    background-color: #007bff;
+    padding: 7px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+}
+
+.wbdv-whole-area {
+    background-color: #EDEDED;
+    min-height: 100vh;
+}
+
+#new-course-title {
+    background-color: lightskyblue;
+}
+
+.top-cell {
+    background-color: #EDEDED;
+    padding-top: 65px;
+    padding-bottom: 12px;
+    /*font-size: 15px;*/
     position: fixed;
     width: 100%;
     z-index: 1;
-    background-color: dodgerblue;
+    box-shadow: 0 1px 1px 0 rgba(0,0,50,0.3);
 }
 
-.wbdv-padding-5px {
-    padding: 5px;
+.top-cell-inside {
+    width: 60%;
+    margin: 2px auto;
+    font-size: 15px;
 }
 
-.wbdv-home {
-    box-shadow: grey;
+.cell-box {
+    padding-top: 103px;
+    margin: 2px auto;
+    width: 60%;
 }
-.wbdv-sticky-2top {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    background-color: lightgrey;
+
+.cell {
+    margin: 1px auto;
+    padding: 13px 0;
+    font-size: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,50,0.3);
+    background-color: white;
+}
+
+.days-divide-cell {
+    margin: 1px auto;
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+#plus-circle {
+    color: #cc444b;
+}
+
+.sticky-icon {
+    position:fixed;
+    bottom:20px;
+    left:90%;
+    color: #cc444b;
+}
+
+.fa-user-friends {
+    color: #A8A8A8;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1225px) {
+    .priority-5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1225px) and (min-width: 1045px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 1045px) and (min-width: 600px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-3{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+    /*.cell-box {*/
+    /*    width: 100%;*/
+    /*}*/
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-3{
+        display:none;
+    }
+    .priority-2{
+        display:none;
+    }
+    .top-cell-inside {
+        width: 100%;
+    }
+    .cell-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .priority-5{
+        display:none;
+    }
+    .priority-3 {
+        display: none;
+    }
+    .priority-2 {
+        display: none;
+    }
+    .top-cell-inside {
+        width: 100%;
+    }
+    .cell-box {
+        width: 100%;
+    }
+}
+
+.cell-box .col-1 {
+    margin-left: auto;
+}
+
+.cell-box .col-3 {
+    margin-left: auto;
+}
+
+.cell-box .col-2\.5 {
+    margin-left: auto;
+}
+
+.cell-box .col-6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

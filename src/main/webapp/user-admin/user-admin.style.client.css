@@ -1,0 +1,28 @@
+h1{
+    color: #000000;
+}
+
+.wbdv-remove {
+    color: #2e6f95;
+}
+
+.wbdv-select {
+    color: #000000;
+}
+
+.wbdv-update {
+    color: #000000;
+}
+
+.wbdv-create {
+    color: #000000;
+}
+
+.wbdv-search {
+    color: #000000;
+}
+
+.btn {
+    border: none; /* Remove borders */
+    cursor: pointer; /* Mouse pointer on hover */
+}

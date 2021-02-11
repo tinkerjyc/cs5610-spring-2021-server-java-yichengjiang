@@ -8,6 +8,29 @@ var users = [
     //{username: "ada", password: "", firstname: "Ada", lastname: "Lovelace", role: "Faculty"}
 ]
 
+function renderUsers(users) {
+    $tbody.empty()
+    for (var i = 0; i < users.length; i++) {
+        var user = users[i]
+        $tbody.prepend(`
+        <tr>
+            <td>${user.username}</td>
+            <td>&nbsp;</td>
+            <td>${user.firstname}</td>
+            <td>${user.lastname}</td>
+            <td>${user.role}</td>
+            <td class="wbdv-actions">
+                <span class="pull-right">
+                  <i class="fa-2x fa fa-times wbdv-remove" id=${i}></i>
+                  <i class="fa-2x fa fa-pencil wbdv-edit" id=${user._id}></i>
+                </span>
+            </td>
+        </tr>`)
+    }
+    $(".wbdv-remove").click(deleteUser)
+    $(".wbdv-edit").click(selectUser)
+}
+
 function createUser() {
     var newUser = {
         username: $usernameFld.val(),
@@ -16,24 +39,28 @@ function createUser() {
         lastname: $lastNameFld.val(),
         role: $roleFld.val()
     }
+    console.log(newUser)
     $usernameFld.val("")
     $passwordFld.val("")
     $firstNameFld.val("")
     $lastNameFld.val("")
     userService.createUser(newUser)
         .then(function (actualUser) {
-            users.push(actualUser)
+            users.unshift(actualUser)
+            console.log(users)
             renderUsers(users)
         })
+    clearForm()
 }
 
 function deleteUser(event) {
     var button = $(event.target)
     var index = button.attr("id")
+    console.log(index)
     var id = users[index]._id
 
     userService.deleteUser(id)
-        .then(function (status){
+        .then(function (status) {
             users.splice(index, 1)
             renderUsers(users)
         })
@@ -66,55 +93,36 @@ function updateUser() {
         })
 }
 
-function renderUsers(users) {
-    $tbody.empty()
-    for (var i = 0; i < users.length; i++) {
-        var user = users[i]
-        $tbody.append(`
-            <tr class="wbdv-template wbdv-user wbdv-hidden">
-            <td class="wbdv-username">${user.username}</td>
-            <td>&nbsp;</td>
-            <td class="wbdv-first-name">${user.firstName}</td>
-            <td class="wbdv-last-name">${user.lastName}</td>
-            <td class="wbdv-role">${user.role}</td>
-            <td class="wbdv-actions">
-        <span class="float-right">
-          <i id="${i}" class="fa-2x fa fa-times wbdv-remove"></i>
-          <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-edit"></i>
-        </span>
-            </td>
-        </tr>
-        `)
-    }
-    $removeBtn = $(".wbdv-remove")
-    $removeBtn.click(deleteUser)
-
-    $editBtn = $(".wbdv-edit")
-    $editBtn.click(selectUser)
+function clearForm() {
+    document.getElementById("usernameFld").value = ""
+    document.getElementById("passwordFld").value = ""
+    document.getElementById("firstNameFld").value = ""
+    document.getElementById("lastNameFld").value = ""
+    document.getElementById("roleFld").value = ""
 }
 
 // function findAllUsers() { … } // optional - might not need this
 // function findUserById() { … } // optional - might not need this
 function main() {
-    $tbody = jQuery(".wbdv-tbody")
+    $tbody = $(".wbdv-tbody")
     $createBtn = $(".wbdv-create")
     $editBtn = $(".wbdv-update")
 
-    $usernameFld = $("#usernameFld")
-    $passwordFld = $("#passwordFld")
-    $firstNameFld = $("#firstNameFld")
-    $lastNameFld = $("#lastNameFld")
-    $roleFld = $("#roleFld")
+    $usernameFld = $(".wbdv-username-fld")
+    $passwordFld = $(".wbdv-password-fld")
+    $firstNameFld = $(".wbdv-firstname-fld")
+    $lastNameFld = $(".wbdv-lastname-fld")
+    $roleFld = $(".wbdv-role-fld")
 
     $createBtn.click(createUser)
     $editBtn.click(updateUser)
     userService.findAllUsers()
-        .then(function(actualUsersFromServer){
-            users = actualUsersFromServer
+        .then(function (actualUsers) {
+            console.log(actualUsers)
+            users = actualUsers
             renderUsers(users)
         })
 
 }
-
 $(main)
 

@@ -9,21 +9,17 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
           crossorigin="anonymous"/>
     <link href="course-editor.style.client.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width， initial-scale=1" />
+    <meta name="viewport" content="width=device-width， initial-scale=1"/>
     <meta charset="UTF-8">
     <title>CourseEditor</title>
 </head>
 <body>
 
-
 <nav class="navbar navbar-expand-lg navbar-dark bg">
     <div class="container-fluid">
-        <a class="fas fa-times fa-2x" style="color: lightgray"
-           href="../course-list/course-list.html"></a>
-        <a class="navbar-brand"
-           style="margin-right: auto;
-           margin-left: auto"
-           >CS5610-WebDev</a>
+        <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+        <a class="navbar-brand" style="margin-right: auto; margin-left: auto"
+           href="course-editor.template.client.html">CS5610 Web Development</a>
         <div class="col-9 collapse navbar-collapse" id="navbarNav">
             <ul class="nav nav-pills white">
                 <li class="nav-item">
@@ -58,64 +54,50 @@
     <div class="col-3 bg-dark priority">
         <ul class="list-group space_list">
             <li>
-                <a class="list-group-item list-group-item-action active"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab" >Module 1 - jQuery
+                <a class="list-group-item list-group-item-action active" data-bs-toggle="list"
+                   href="#" role="tab">Module 1 - jQuery
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 2 - React
+                   data-bs-toggle="list" href="#" role="tab">Module 2 - React
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 3 - Redux
+                   data-bs-toggle="list" href="#" role="tab">Module 3 - Redux
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 4 - Native
+                   data-bs-toggle="list" href="#" role="tab">Module 4 - Native
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 5 - Angular
+                   data-bs-toggle="list" href="#" role="tab">Module 5 - Angular
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 6 - Node
+                   data-bs-toggle="list" href="#" role="tab">Module 6 - Node
                     <i class="fas fa-times float-right"></i>
                 </a>
             </li>
             <li>
                 <a class="list-group-item list-group-item-action list-group-item-dark"
-                   data-bs-toggle="list"
-                   href="#"
-                   role="tab">Module 7 - Mongo
+                   data-bs-toggle="list" href="#" role="tab">Module 7 - Mongo
                     <i class="fas fa-times float-right"></i>
                 </a>
-            <li>
-                <div>
-                    <i class="fas fa-plus plus-in-list fa-2x"></i>
-                </div>
+            </li>
+            <div>
+                <i class="fas fa-plus plus-in-list fa-2x"></i>
+            </div>
         </ul>
     </div>
 
@@ -147,35 +129,27 @@
             <br>
             <div class="div1">
                 <div class="col-sm-12 combo">
-                    <p><b style="font-size: 20px">Heading widget</b>
-                        <i class="fas fa-times-square fa-2x cross"></i>
-                        <select class="col-3 form-control"
+                    <p><b style="font-size: 25px">Heading widget</b>
+                        <i class="fas fa-times-square fa-3x cross"></i>
+                        <select class="form-control wbdv-field wbdv-role"
                                 name="heading" id="heading">
                             <option value="Heading" selected>Heading</option>
                         </select>
-                        <i class="fas fa-arrow-square-up fa-2x arrow"></i>
-                        <i class="fas fa-arrow-square-down fa-2x arrow"></i>
+                        <i class="fas fa-arrow-square-up fa-3x arrow"></i>
+                        <i class="fas fa-arrow-square-down fa-3x arrow"></i>
                     </p>
                 </div>
                 <div class="col-sm-12">
-                    <input type="text" placeholder="Heading text"
-                           class="form-control"
-                           id="headingtext"
-                           name="headingtext">
+                    <input type="text" placeholder="Heading text" class="form-control"
+                           id="headingtext" name="headingtext">
                 </div>
                 <div class="col-sm-12">
-                    <input type="text"
-                           placeholder="Heading 1"
-                           class="form-control"
-                           id="heading1"
+                    <input type="text" placeholder="Heading 1" class="form-control" id="heading1"
                            name="heading1">
                 </div>
                 <div class="col-sm-12">
-                    <input type="text"
-                           placeholder="Widget name"
-                           class="form-control"
-                           id="widgetname"
-                           name="widgetname">
+                    <input type="text" placeholder="Widget name" class="form-control"
+                           id="widgetname" name="widgetname">
                 </div>
                 <br>
                 <div class="col-sm-12">

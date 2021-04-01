@@ -1,9 +1,15 @@
 package com.example.wbdvsp2102yichengjiangserverjava.models;
 
+import javax.persistence.*;
+
+@Entity //map Widget class to db
+@Table(name = "widgets")
 public class Widget {
+  @Id //set id as primary key
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
   private String topicId;
   private String name;
-  private Long id;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -139,6 +145,14 @@ public class Widget {
   }
 
   public Widget() {
+  }
+
+  public Widget(Long id, String topicId, String type, Integer size, String text) {
+    this.id = id;
+    this.topicId = topicId;
+    this.type = type;
+    this.size = size;
+    this.text = text;
   }
 
   public Widget(Long id, String name, String topicId, String type, Integer widgetOrder, Integer size, String text, String src, String url, String href, Integer width, Integer height,

@@ -14,124 +14,54 @@ public class WidgetService {
   @Autowired
   WidgetRepository repository;
 
-//     private List<Widget> widgets = new ArrayList<Widget>();
-//    {
-//        Widget w1 = new Widget(123l, "ABC123", "HEADING", 1, "Welcome to Widgets");
-//        Widget w2 = new Widget(123l, "ABC123", "HEADING", 1, "Welcome to Widgets");
-//        Widget w3 = new Widget(234l, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
-//        Widget w4 = new Widget(345l, "ABC234", "HEADING", 2, "Welcome to WebDev");
-//        Widget w5 = new Widget(456l, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
-//        widgets.add(w1);
-//        widgets.add(w2);
-//        widgets.add(w3);
-//        widgets.add(w4);
-//        widgets.add(w5);
-//    }
-
-  // implement crud operations
   public Widget createWidget(String tid, Widget widget) {
     widget.setTopicId(tid);
-    return repository.save(widget);
-//        widget.setId((new Date()).getTime());
-//        widgets.add(widget);
-//        return widget;
-  }
 
+    return repository.save(widget);
+  }
   public List<Widget> findAllWidgets() {
     return (List<Widget>) repository.findAll();
-//        return widgets;
   }
-
   public List<Widget> findWidgetsForTopic(String tid) {
-    return repository.findWidgetForTopic(tid);
-//        List<Widget> ws = new ArrayList<Widget>();
-//        for(Widget w: widgets) {
-//            if(w.getTopicId().equals(tid)) {
-//                ws.add(w);
-//            }
-//        }
-//        return ws;
+    return repository.findWidgetsForTopic(tid);
   }
-
-  public Widget findWidgetById(Long wid) {
-    return repository.findWidgetById(wid);
-//        for(Widget w: widgets) {
-//            if(w.getId().equals(wid)) {
-//                return w;
-//            }
-//        }
-//        return null;
-  }
-
-  public int updateWidget(Long id, Widget newWidget) {
-    Widget originalWidget = repository.findById(id).get();
-    // TODO: copy all the other fields testing for null
-    if (newWidget.getText() != null) {
-      originalWidget.setText(newWidget.getText());
+  public Integer updateWidget(Long wid, Widget widget) {
+    Widget originalWidget = repository.findById(wid).get();
+    if(widget.getId() != null) {
+      originalWidget.setId(widget.getId());
     }
-    if (newWidget.getTopicId() != null) {
-      originalWidget.setTopicId(newWidget.getTopicId());
+    if(widget.getTopicId() != null) {
+      originalWidget.setTopicId(widget.getTopicId());
     }
-    if (newWidget.getName() != null) {
-      originalWidget.setName(newWidget.getName());
+    if(widget.getType() != null) {
+      originalWidget.setType(widget.getType());
     }
-    if (newWidget.getType() != null) {
-      originalWidget.setType(newWidget.getType());
+    if(widget.getSize() != null) {
+      originalWidget.setSize(widget.getSize());
     }
-    if (newWidget.getWidgetOrder() != null) {
-      originalWidget.setWidgetOrder(newWidget.getWidgetOrder());
+    if(widget.getText() != null) {
+      originalWidget.setText(widget.getText());
     }
-    if (newWidget.getCssClass() != null) {
-      originalWidget.setCssClass(newWidget.getCssClass());
+    if(widget.getSrc() != null) {
+      originalWidget.setSrc(widget.getSrc());
     }
-    if (newWidget.getHeight() != null) {
-      originalWidget.setHeight(newWidget.getHeight());
+    if(widget.getHeight() != null) {
+      originalWidget.setHeight(widget.getHeight());
     }
-    if (newWidget.getWidth() != null) {
-      originalWidget.setWidth(newWidget.getWidth());
+    if(widget.getWidth() != null) {
+      originalWidget.setWidth(widget.getWidth());
     }
-    if (newWidget.getSrc() != null) {
-      originalWidget.setSrc(newWidget.getSrc());
+    if(widget.getOrdered() != null) {
+      originalWidget.setOrdered(widget.getOrdered());
     }
-    if (newWidget.getUrl() != null) {
-      originalWidget.setUrl(newWidget.getUrl());
-    }
-    if (newWidget.getHref() != null) {
-      originalWidget.setHref(newWidget.getHref());
-    }
-    if (newWidget.getSize() != null) {
-      originalWidget.setSize(newWidget.getSize());
-    }
-    if (newWidget.getStyle() != null) {
-      originalWidget.setStyle(newWidget.getStyle());
-    }
-    if (newWidget.getValue() != null) {
-      originalWidget.setValue(newWidget.getValue());
-    }
-
     repository.save(originalWidget);
     return 1;
-//        for(int i=0; i<widgets.size(); i++) {
-//            Widget w = widgets.get(i);
-//            if(w.getId().equals(id)) {
-//                widgets.set(i, newWidget);
-//                return 1;
-//            }
-//        }
-//        return -1;
   }
-
-  public int deleteWidget(Long id) {
-    repository.deleteById(id);
-//        int index = -1;
-//        for(int i=0; i<widgets.size(); i++) {
-//            if(widgets.get(i).getId().equals(id)) {
-//                index = i;
-//                widgets.remove(index);
-//                return 1;
-//            }
-//        }
-//        return -1;
+  public Integer deleteWidget(Long wid) {
+    repository.deleteById(wid);
     return 1;
+  }
+  public Widget findWidgetById(Long wid) {
+    return repository.findById(wid).get();
   }
 }
